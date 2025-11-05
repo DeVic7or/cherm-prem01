@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Cherminho Premiações</title>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1032706115220082");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1032706115220082&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Segurança para redirecionamentos externos (WhatsApp, Telegram etc.) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"
+    />
+  </head>
+
+  <body>
+    <main class="ctn-content">
+      <img class="logo" src="./src/LOGO.webp" alt="Cherminho Premiações" />
+
+      <h2>
+        Você pode ser o próximo ganhador!<br />
+        Carros, Motos, Prêmios em Dinheiro e muito mais!
+      </h2>
+
+      <div class="list-ctn">
+        <ul>
+          <li class="list-item">
+            <i class="ico bx bxs-right-arrow-circle"></i>Premiações toda semana!
+          </li>
+          <li class="list-item">
+            <i class="ico bx bxs-right-arrow-circle"></i>100% legalizada e
+            confiável!
+          </li>
+          <li class="list-item">
+            <i class="ico bx bxs-right-arrow-circle"></i>15 mil famílias
+            transformadas!
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botão WhatsApp corrigido + evento Lead -->
+      <a
+        href="https://chat.whatsapp.com/Jjb93sLVoY8CEyXIcQEgI6?mode=wwt"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="text-decoration: none"
+        id="btn-whatsapp"
+      >
+        <button class="btn-whatsapp" type="button">
+          Acesse meu grupo no WhatsApp
+        </button>
+      </a>
+    </main>
+
+    <!-- Rastreio de clique (Lead real) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("btn-whatsapp");
+        if (btn) {
+          btn.addEventListener("click", function () {
+            fbq("track", "Lead");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
